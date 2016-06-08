@@ -1,14 +1,8 @@
 require 'rubygems'
 require 'bundler/setup'
 Bundler.require(:default)
-
-######
-# Pull settings from the .env file.
-######
 Dotenv.load
 @graph = Koala::Facebook::API.new(ENV["FB_TOKEN"], ENV["APP_SECRET"])
-
-
 today = Xmlstats.mlb_standing
 today.each do |team|
   if team.last_name == "Cardinals"
