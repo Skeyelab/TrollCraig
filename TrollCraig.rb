@@ -6,7 +6,6 @@ Bundler.require(:default)
 # Pull settings from the .env file.
 ######
 Dotenv.load
-binding.pry
 @graph = Koala::Facebook::API.new(ENV["FB_TOKEN"], ENV["APP_SECRET"])
 
 
