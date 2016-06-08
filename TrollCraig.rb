@@ -3,6 +3,7 @@ require 'bundler/setup'
 Bundler.require(:default)
 Dotenv.load
 @graph = Koala::Facebook::API.new(ENV["FB_TOKEN"], ENV["APP_SECRET"])
+
 today = Xmlstats.mlb_standing
 
 stats = {}
